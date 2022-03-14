@@ -1,0 +1,14 @@
+﻿@using Students.WebApp.Models
+@{
+    ViewData["Title"] = "Students";
+}
+
+<ul>
+    @{
+        var students = (Model as Students)?.GetAllStudents();
+        foreach (var student in students)
+        {
+            <li><a asp-area="" asp-controller="Student" asp-action="Student">@student.LastName @student.FirstName</a></li>
+        }
+    }
+</ul>

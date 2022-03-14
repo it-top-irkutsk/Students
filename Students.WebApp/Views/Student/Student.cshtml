@@ -1,0 +1,6 @@
+﻿@using Students.WebApp.Models
+@{
+    var student = Model as Student;
+    var name = $"{student?.LastName} {student?.FirstName}";
+    ViewData["Title"] = name;
+}
